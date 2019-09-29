@@ -1,0 +1,83 @@
+* {
+	margin: 0;
+	padding: 0;
+	outline: 0;
+}
+
+html,
+body {
+	height: 100%;
+	user-select: none;
+}
+
+#root {
+	height: 100%;
+}
+
+.App {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background-color: rgb(56, 56, 56);
+	height: 100%;
+}
+
+.VideoRtcContainer {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+.VideoRtc {
+	border-color: 'black';
+	border-width: 1px;
+	border-style: 'solid';
+	background-color: 'red';
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.Menu {
+	background-color: black;
+	height: 50px;
+	display: flex;
+	justify-content: space-evenly;
+}
+.CameraChooserRtc {
+	background-color: transparent;
+	border: 0;
+	color: white;
+}
+
+.Button {
+	background-color: transparent;
+	border: 0;
+	color: white;
+	bottom: 0;
+  justify-self: flex-end;
+  transition: all 0.1s ease-in-out;
+}
+.Button:active {
+  transform: scale(0.5);
+}
+
+.Button img {
+	max-width: 30px;
+	max-height: 30px;
+	vertical-align: middle;
+}
+.PhotoButton {
+	padding: 0 40px;
+}
+.PhotoButton img {
+}
+
+.HistoryButton {
+}
+.HistoryButton img {
+}
+
+.SettingsButton {
+}
+.SettingsButton img {
+}

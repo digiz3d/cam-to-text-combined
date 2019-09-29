@@ -1,0 +1,25 @@
+{
+  "name": "cam-to-text-backend",
+  "version": "0.1.0",
+  "main": "src/index.js",
+  "repository": "https://github.com/digiz3d/cam-to-text-backend",
+  "author": "digiz3d",
+  "private": true,
+  "scripts": {
+    "build": "babel src -d build",
+    "dev": "nodemon --exec babel-node src/index.js",
+    "start": "node build/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/node": "^7.6.1",
+    "@babel/preset-env": "^7.6.0",
+    "eslint": "^6.4.0",
+    "nodemon": "^1.19.2"
+  }
+}

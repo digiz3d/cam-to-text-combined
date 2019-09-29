@@ -1,0 +1,18 @@
+steps:
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['install']
+  dir: 'front'
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['run', 'build']
+  dir: 'front'
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['install']
+  dir: 'back'
+- name: 'gcr.io/cloud-builders/yarn'
+  args: ['run', 'build']
+  dir: 'back'
+- name : 'gcr.io/cloud-builders/gsutil'
+  args: ['cp','front/build','back/front']
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app','deploy']
+  dir: 'back'

@@ -6,7 +6,7 @@ steps:
   args: ['run', 'build']
   dir: 'front'
 - name : 'ubuntu'
-  args: ['cp','front/build','back/front']
+  args: ['cp','-r','front/build','back/front']
 - name: 'gcr.io/cloud-builders/yarn'
   args: ['install']
   dir: 'back'
